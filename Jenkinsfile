@@ -1,3 +1,4 @@
+#test comment added to branch featureA
 @Library('github.com/cloudbeers/multibranch-demo-lib') _
 standardBuild {
     environment = 'golang:1.5.0'
