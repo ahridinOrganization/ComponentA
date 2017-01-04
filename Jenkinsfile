@@ -10,3 +10,4 @@ stage ('Run methods from the loaded content') {
 	helloworld.printHello()
 	environment.dumpEnvVars()
 	}
+
