@@ -1,5 +1,4 @@
 #!groovy
-
 def environment, helloworld
 
 stage ('Load files from GitHub') {
