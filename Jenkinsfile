@@ -1,6 +1,5 @@
 #!groovy
 def environment, helloworld
-def test;
 stage ('Load files from GitHub') {
 fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
 	helloworld = fileLoader.load('vars/helloworld');
