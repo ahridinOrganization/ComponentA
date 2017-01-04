@@ -1,14 +1,25 @@
 #!groovy
-developer {
-  checkoutScm()
-  rake 'unittest[--report=build/report.xml]'
-  reportJunit 'build/report.xml'  // will publish the test report
-  optional { rake 'audit' }  // to mark stages which are not critical
-  rake 'uml'
-  reportHtml(name: 'UML', path: 'build/html')  // will upload an arbitrary HTML Report
-  rake 'test variant=release'
-  rake 'deploy prefix=export'
+
+stage 'Load files from GitHub'
+def environment, helloworld
+fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
+    helloworld = fileLoader.load('vars/helloworld');
+    environment = fileLoader.load('vars/environment');
 }
+stage 'Run methods from the loaded content'
+helloworld.printHello()
+environment.dumpEnvVars()
+
+//developer {
+  //checkoutScm()
+  //rake 'unittest[--report=build/report.xml]'
+  //reportJunit 'build/report.xml'  // will publish the test report
+  //optional { rake 'audit' }  // to mark stages which are not critical
+  //rake 'uml'
+  //reportHtml(name: 'UML', path: 'build/html')  // will upload an arbitrary HTML Report
+  //rake 'test variant=release'
+  //rake 'deploy prefix=export'
+//}
 
 
 //#!groovy
