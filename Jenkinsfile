@@ -12,4 +12,3 @@ stage ('Run methods from the loaded content') {
 	environment.dumpEnvVars()
 	}
 
-#test
