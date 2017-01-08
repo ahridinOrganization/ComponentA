@@ -10,5 +10,7 @@ fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'mas
 stage ('Run methods from the loaded content') {
 	helloworld.printHello()
 	environment.dumpEnvVars()
-	scm.checkout()
+	node { 
+		scm.checkout()
 	}
+}
