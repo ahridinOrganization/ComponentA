@@ -5,5 +5,5 @@ fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'mas
 }	
 	
 stage ('Preparation') {
-	stage0.printHello("STAGE-0")			
+	stage0()	
 }
