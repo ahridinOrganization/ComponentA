@@ -8,6 +8,7 @@ stage ('Preparation') {
 	helloworld.printHello("Good morning!")
 	environment.dumpEnvVars()			
 	}
+}	
 stage ('Stage1: Chekout') {
 	node { scm.checkout()}
 }
