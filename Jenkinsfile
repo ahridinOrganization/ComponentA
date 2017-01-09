@@ -1,6 +1,6 @@
 #!groovy
 def environment, helloworld
-stage ('Load files from GitHub') {
+stage ('Load Build files from GitHub') {
 fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
 	helloworld = fileLoader.load('vars/helloworld');
 	environment = fileLoader.load('vars/environment');
@@ -10,7 +10,5 @@ fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'mas
 stage ('Run methods from the loaded content') {
 	helloworld.printHello("Good morning!")
 	environment.dumpEnvVars()
-	node { 
-		scm.checkout()
-	}
+	node { scm.checkout()}
 }
