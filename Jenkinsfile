@@ -1,11 +1,10 @@
 #!groovy
-def environment, helloworld
+def environment
 
 fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
-		helloworld = fileLoader.load('vars/helloworld');
-		
+	environment = fileLoader.load('vars/environment'); 
+}	
 	
 stage ('Preparation') {
-	helloworld.printHello("Good morning!")	
-	}
-}	
+	environment.dumpEnvVars()			
+}
