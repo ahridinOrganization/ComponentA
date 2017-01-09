@@ -1,5 +1,4 @@
 #!groovy
-def environment
 
 fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
 	stage0 = fileLoader.load('vars/stage0'); 
