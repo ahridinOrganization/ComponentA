@@ -12,5 +12,5 @@ stage ('Preparation') {
 	}
 }	
 stage ('Checkout') {
-	node { scm.checkout()}
+	node { scm.checkout('https://wwwin-svn-jrsm.cisco.com/nds/ch_repo/tags/vgs3/acman')}
 }
