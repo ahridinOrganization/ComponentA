@@ -2,9 +2,9 @@
 def environment
 
 fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
-	environment = fileLoader.load('vars/environment'); 
+	stage0 = fileLoader.load('vars/stage0'); 
 }	
 	
 stage ('Preparation') {
-	environment.dumpEnvVars()			
+	stage0.printHello("STAGE-0")			
 }
