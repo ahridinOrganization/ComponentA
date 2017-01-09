@@ -9,6 +9,6 @@ stage ('Preparation') {
 	environment.dumpEnvVars()			
 	}
 }	
-stage ('Stage1: Chekout') {
+stage ('Checkout') {
 	node { scm.checkout()}
 }
