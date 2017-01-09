@@ -7,7 +7,7 @@ fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'mas
 	
 //stage ('Preparation') {
 node {
-	stage0()	
+	//stage0()	
 }
 
 
