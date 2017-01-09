@@ -6,8 +6,9 @@ fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'mas
 }	
 	
 //stage ('Preparation') {
-//	stage0.call()	
+stage0()	
+
 pipeline {
     name = 'git'
 }
-}
+
