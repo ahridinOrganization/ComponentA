@@ -4,7 +4,10 @@ fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'mas
 	stage0 = fileLoader.load('vars/stage0'); 
 	//pipeline = fileLoader.load('vars/pipeline'); 
 }	
-	
+def myJob = freeStyleJob('SimpleJob')
+myJob.with {
+    description 'A Simple Job'
+}
 
 
 
