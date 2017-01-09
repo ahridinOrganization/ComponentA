@@ -9,7 +9,7 @@ fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'mas
 //myJob.with {
   //  description 'A Simple Job'
 //}
-
+wrappedNode.call()
 
 
 
