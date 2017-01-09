@@ -1,15 +1,6 @@
-#!groovy
-
-
-fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
-	stage0 = fileLoader.load('vars/Stage0');
-}
-stage0.run()
-
-
 
 #!groovy
-def environment, helloworld
+def environment, helloworld,stage0,scm
 
 fileLoader.withGit('https://github.com/ahridinOrganization/jenkinsDSL.git', 'master', null, '') {
 		helloworld = fileLoader.load('vars/helloworld');
