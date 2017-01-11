@@ -1,15 +1,2 @@
-@Library('github.com/cloudbeers/multibranch-demo-lib') _
-standardBuild {
-    environment = 'golang:1.5.0'
-    mainScript = '''
-go version
-go build -v hello-world.go
-'''
-    postScript = '''
-ls -l
-./hello-world
-'''
-}
-
-
-def e
+@Library('github.com/ahridinOrganization/jenkinsDSL') _
+jobDsl failOnMissingPlugin: true, removedJobAction: 'DISABLE', removedViewAction: 'DELETE', scriptText: 'stage_0.groovy', unstableOnDeprecation: true
